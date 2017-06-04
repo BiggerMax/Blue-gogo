@@ -1,0 +1,9 @@
+platform :ios,'9.0'
+target 'Bluegogo' do
+	pod "AFNetworking"
+	pod "SDWebImage"
+	pod "MBProgressHUD"
+	pod "AMapSearch"
+	pod "AMapNavi"
+	pod "AMapLocation"
+end

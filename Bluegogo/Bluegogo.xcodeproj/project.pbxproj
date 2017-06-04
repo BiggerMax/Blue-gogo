@@ -18,9 +18,11 @@
 		9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F21EE434CE00536F03 /* YJMyViewController.m */; };
 		9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F91EE4350300536F03 /* YJNewsViewController.m */; };
 		9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873FD1EE4386300536F03 /* YJNavigationController.m */; };
+		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		97681A0AFB54A9BC788E47D3 /* Pods-Bluegogo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.release.xcconfig"; sourceTree = "<group>"; };
 		9D8873C01EE4326D00536F03 /* Bluegogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluegogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8873C41EE4326D00536F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D8873C91EE4326D00536F03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		9D8873FB1EE4352000536F03 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9D8873FC1EE4386300536F03 /* YJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
 		9D8873FD1EE4386300536F03 /* YJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNavigationController.m; sourceTree = "<group>"; };
+		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
+		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05FAB45D4F60FFFD9007E7B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */,
+				97681A0AFB54A9BC788E47D3 /* Pods-Bluegogo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1BAB477D80461957B5BE8AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D8873B71EE4326D00536F03 = {
 			isa = PBXGroup;
 			children = (
 				9D8873C21EE4326D00536F03 /* Bluegogo */,
 				9D8873C11EE4326D00536F03 /* Products */,
+				05FAB45D4F60FFFD9007E7B6 /* Pods */,
+				1BAB477D80461957B5BE8AA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D8873D71EE4326D00536F03 /* Build configuration list for PBXNativeTarget "Bluegogo" */;
 			buildPhases = (
+				110341908266F2FFAF2A53B8 /* [CP] Check Pods Manifest.lock */,
 				9D8873BC1EE4326D00536F03 /* Sources */,
 				9D8873BD1EE4326D00536F03 /* Frameworks */,
 				9D8873BE1EE4326D00536F03 /* Resources */,
+				8393D6070C34393F712757DB /* [CP] Embed Pods Frameworks */,
+				D34F2C3C3D3069814DCF5C99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,7 @@
 		9D8873B81EE4326D00536F03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YJ;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = VIPLimited;
 				TargetAttributes = {
@@ -292,6 +320,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		110341908266F2FFAF2A53B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8393D6070C34393F712757DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D34F2C3C3D3069814DCF5C99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D8873BC1EE4326D00536F03 /* Sources */ = {
@@ -423,6 +499,7 @@
 		};
 		9D8873D81EE4326D00536F03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG7CZTQQHX;
@@ -438,6 +515,7 @@
 		};
 		9D8873D91EE4326D00536F03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97681A0AFB54A9BC788E47D3 /* Pods-Bluegogo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG7CZTQQHX;
