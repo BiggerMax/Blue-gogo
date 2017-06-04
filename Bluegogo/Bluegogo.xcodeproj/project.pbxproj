@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D8873C51EE4326D00536F03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873C41EE4326D00536F03 /* main.m */; };
+		9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873CA1EE4326D00536F03 /* ViewController.m */; };
+		9D8873CE1EE4326D00536F03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8873CC1EE4326D00536F03 /* Main.storyboard */; };
+		9D8873D01EE4326D00536F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8873CF1EE4326D00536F03 /* Assets.xcassets */; };
+		9D8873D31EE4326D00536F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8873D11EE4326D00536F03 /* LaunchScreen.storyboard */; };
+		9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873DC1EE432C700536F03 /* AppDelegate.m */; };
+		9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873E01EE4330A00536F03 /* MainTabBarController.m */; };
+		9D8873ED1EE433E800536F03 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873E81EE433E800536F03 /* MainTabBarController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9D8873C01EE4326D00536F03 /* Bluegogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluegogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8873C41EE4326D00536F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D8873C91EE4326D00536F03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9D8873CA1EE4326D00536F03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9D8873CD1EE4326D00536F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D8873CF1EE4326D00536F03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D8873D21EE4326D00536F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D8873D41EE4326D00536F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8873DB1EE432C700536F03 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D8873DC1EE432C700536F03 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D8873DF1EE4330A00536F03 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		9D8873E01EE4330A00536F03 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		9D8873E71EE433E800536F03 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		9D8873E81EE433E800536F03 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D8873BD1EE4326D00536F03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D8873B71EE4326D00536F03 = {
+			isa = PBXGroup;
+			children = (
+				9D8873C21EE4326D00536F03 /* Bluegogo */,
+				9D8873C11EE4326D00536F03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D8873C11EE4326D00536F03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873C01EE4326D00536F03 /* Bluegogo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D8873C21EE4326D00536F03 /* Bluegogo */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873E21EE433E800536F03 /* Home */,
+				9D8873E61EE433E800536F03 /* Main */,
+				9D8873E91EE433E800536F03 /* My */,
+				9D8873DE1EE432EE00536F03 /* Main */,
+				9D8873DA1EE432C700536F03 /* Other */,
+				9D8873C91EE4326D00536F03 /* ViewController.h */,
+				9D8873CA1EE4326D00536F03 /* ViewController.m */,
+				9D8873CC1EE4326D00536F03 /* Main.storyboard */,
+				9D8873CF1EE4326D00536F03 /* Assets.xcassets */,
+				9D8873D11EE4326D00536F03 /* LaunchScreen.storyboard */,
+				9D8873D41EE4326D00536F03 /* Info.plist */,
+				9D8873C31EE4326D00536F03 /* Supporting Files */,
+			);
+			path = Bluegogo;
+			sourceTree = "<group>";
+		};
+		9D8873C31EE4326D00536F03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873C41EE4326D00536F03 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D8873DA1EE432C700536F03 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873DB1EE432C700536F03 /* AppDelegate.h */,
+				9D8873DC1EE432C700536F03 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9D8873DE1EE432EE00536F03 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873DF1EE4330A00536F03 /* MainTabBarController.h */,
+				9D8873E01EE4330A00536F03 /* MainTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9D8873E21EE433E800536F03 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873E31EE433E800536F03 /* Controller */,
+				9D8873E41EE433E800536F03 /* Model */,
+				9D8873E51EE433E800536F03 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9D8873E31EE433E800536F03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D8873E41EE433E800536F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D8873E51EE433E800536F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D8873E61EE433E800536F03 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873E71EE433E800536F03 /* MainTabBarController.h */,
+				9D8873E81EE433E800536F03 /* MainTabBarController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9D8873E91EE433E800536F03 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873EA1EE433E800536F03 /* Controller */,
+				9D8873EB1EE433E800536F03 /* Model */,
+				9D8873EC1EE433E800536F03 /* View */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		9D8873EA1EE433E800536F03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D8873EB1EE433E800536F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D8873EC1EE433E800536F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D8873BF1EE4326D00536F03 /* Bluegogo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D8873D71EE4326D00536F03 /* Build configuration list for PBXNativeTarget "Bluegogo" */;
+			buildPhases = (
+				9D8873BC1EE4326D00536F03 /* Sources */,
+				9D8873BD1EE4326D00536F03 /* Frameworks */,
+				9D8873BE1EE4326D00536F03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bluegogo;
+			productName = Bluegogo;
+			productReference = 9D8873C01EE4326D00536F03 /* Bluegogo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D8873B81EE4326D00536F03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = VIPLimited;
+				TargetAttributes = {
+					9D8873BF1EE4326D00536F03 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DG7CZTQQHX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9D8873BB1EE4326D00536F03 /* Build configuration list for PBXProject "Bluegogo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D8873B71EE4326D00536F03;
+			productRefGroup = 9D8873C11EE4326D00536F03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D8873BF1EE4326D00536F03 /* Bluegogo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D8873BE1EE4326D00536F03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8873D31EE4326D00536F03 /* LaunchScreen.storyboard in Resources */,
+				9D8873D01EE4326D00536F03 /* Assets.xcassets in Resources */,
+				9D8873CE1EE4326D00536F03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D8873BC1EE4326D00536F03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
+				9D8873ED1EE433E800536F03 /* MainTabBarController.m in Sources */,
+				9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */,
+				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
+				9D8873C51EE4326D00536F03 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D8873CC1EE4326D00536F03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D8873CD1EE4326D00536F03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D8873D11EE4326D00536F03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D8873D21EE4326D00536F03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D8873D51EE4326D00536F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D8873D61EE4326D00536F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D8873D81EE4326D00536F03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				INFOPLIST_FILE = Bluegogo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.VIPLimited.Bluegogo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9D8873D91EE4326D00536F03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				INFOPLIST_FILE = Bluegogo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.VIPLimited.Bluegogo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D8873BB1EE4326D00536F03 /* Build configuration list for PBXProject "Bluegogo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8873D51EE4326D00536F03 /* Debug */,
+				9D8873D61EE4326D00536F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D8873D71EE4326D00536F03 /* Build configuration list for PBXNativeTarget "Bluegogo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D8873D81EE4326D00536F03 /* Debug */,
+				9D8873D91EE4326D00536F03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D8873B81EE4326D00536F03 /* Project object */;
+}
