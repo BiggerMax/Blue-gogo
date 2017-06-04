@@ -14,7 +14,10 @@
 		9D8873D31EE4326D00536F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D8873D11EE4326D00536F03 /* LaunchScreen.storyboard */; };
 		9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873DC1EE432C700536F03 /* AppDelegate.m */; };
 		9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873E01EE4330A00536F03 /* MainTabBarController.m */; };
-		9D8873ED1EE433E800536F03 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873E81EE433E800536F03 /* MainTabBarController.m */; };
+		9D8873F01EE434C300536F03 /* YJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873EF1EE434C300536F03 /* YJHomeViewController.m */; };
+		9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F21EE434CE00536F03 /* YJMyViewController.m */; };
+		9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F91EE4350300536F03 /* YJNewsViewController.m */; };
+		9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873FD1EE4386300536F03 /* YJNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +33,15 @@
 		9D8873DC1EE432C700536F03 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9D8873DF1EE4330A00536F03 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		9D8873E01EE4330A00536F03 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		9D8873E71EE433E800536F03 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		9D8873E81EE433E800536F03 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		9D8873EE1EE434C300536F03 /* YJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeViewController.h; sourceTree = "<group>"; };
+		9D8873EF1EE434C300536F03 /* YJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeViewController.m; sourceTree = "<group>"; };
+		9D8873F11EE434CE00536F03 /* YJMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJMyViewController.h; sourceTree = "<group>"; };
+		9D8873F21EE434CE00536F03 /* YJMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJMyViewController.m; sourceTree = "<group>"; };
+		9D8873F81EE4350300536F03 /* YJNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNewsViewController.h; sourceTree = "<group>"; };
+		9D8873F91EE4350300536F03 /* YJNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNewsViewController.m; sourceTree = "<group>"; };
+		9D8873FB1EE4352000536F03 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9D8873FC1EE4386300536F03 /* YJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
+		9D8873FD1EE4386300536F03 /* YJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +74,9 @@
 		9D8873C21EE4326D00536F03 /* Bluegogo */ = {
 			isa = PBXGroup;
 			children = (
+				9D8873FF1EE439AF00536F03 /* Resource */,
+				9D8873F41EE434F700536F03 /* News */,
 				9D8873E21EE433E800536F03 /* Home */,
-				9D8873E61EE433E800536F03 /* Main */,
 				9D8873E91EE433E800536F03 /* My */,
 				9D8873DE1EE432EE00536F03 /* Main */,
 				9D8873DA1EE432C700536F03 /* Other */,
@@ -93,6 +104,7 @@
 			children = (
 				9D8873DB1EE432C700536F03 /* AppDelegate.h */,
 				9D8873DC1EE432C700536F03 /* AppDelegate.m */,
+				9D8873FB1EE4352000536F03 /* PrefixHeader.pch */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -102,6 +114,8 @@
 			children = (
 				9D8873DF1EE4330A00536F03 /* MainTabBarController.h */,
 				9D8873E01EE4330A00536F03 /* MainTabBarController.m */,
+				9D8873FC1EE4386300536F03 /* YJNavigationController.h */,
+				9D8873FD1EE4386300536F03 /* YJNavigationController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -119,6 +133,8 @@
 		9D8873E31EE433E800536F03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9D8873EE1EE434C300536F03 /* YJHomeViewController.h */,
+				9D8873EF1EE434C300536F03 /* YJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,15 +153,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9D8873E61EE433E800536F03 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				9D8873E71EE433E800536F03 /* MainTabBarController.h */,
-				9D8873E81EE433E800536F03 /* MainTabBarController.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		9D8873E91EE433E800536F03 /* My */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +166,8 @@
 		9D8873EA1EE433E800536F03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9D8873F11EE434CE00536F03 /* YJMyViewController.h */,
+				9D8873F21EE434CE00536F03 /* YJMyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +184,46 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9D8873F41EE434F700536F03 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873F51EE434F700536F03 /* Controller */,
+				9D8873F61EE434F700536F03 /* Model */,
+				9D8873F71EE434F700536F03 /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		9D8873F51EE434F700536F03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D8873F81EE4350300536F03 /* YJNewsViewController.h */,
+				9D8873F91EE4350300536F03 /* YJNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D8873F61EE434F700536F03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D8873F71EE434F700536F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D8873FF1EE439AF00536F03 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,11 +298,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */,
+				9D8873F01EE434C300536F03 /* YJHomeViewController.m in Sources */,
+				9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */,
 				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
-				9D8873ED1EE433E800536F03 /* MainTabBarController.m in Sources */,
 				9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */,
 				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
 				9D8873C51EE4326D00536F03 /* main.m in Sources */,
+				9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +426,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bluegogo/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = Bluegogo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -387,6 +441,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Bluegogo/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = Bluegogo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -414,6 +470,7 @@
 				9D8873D91EE4326D00536F03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

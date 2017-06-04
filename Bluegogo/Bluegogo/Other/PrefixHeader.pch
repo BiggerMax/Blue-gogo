@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  Bluegogo
+//
+//  Created by 袁杰 on 2017/6/4.
+//  Copyright © 2017年 VIPLimited. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "YJHomeViewController.h"
+#import "YJNewsViewController.h"
+#import "YJMyViewController.h"
+#import "YJNavigationController.h"
+#import "MainTabBarController.h"
+
+#define  NAVBLUECOLOR [UIColor colorWithRed:40/255.0f green:158/255.0f blue:252/255.0f alpha:1]
+#endif /* PrefixHeader_pch */
