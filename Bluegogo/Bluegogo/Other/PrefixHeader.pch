@@ -14,6 +14,10 @@
 #import "YJMyViewController.h"
 #import "YJNavigationController.h"
 #import "MainTabBarController.h"
-
+#import "YJInfoCell.h"
+#import "YJInfoHeaderCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#define  SCREENWIDTH ([UIScreen mainScreen].bounds.size.width)
+#define  SCRRENHEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define  NAVBLUECOLOR [UIColor colorWithRed:40/255.0f green:158/255.0f blue:252/255.0f alpha:1]
 #endif /* PrefixHeader_pch */

@@ -18,6 +18,9 @@
 		9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F21EE434CE00536F03 /* YJMyViewController.m */; };
 		9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873F91EE4350300536F03 /* YJNewsViewController.m */; };
 		9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8873FD1EE4386300536F03 /* YJNavigationController.m */; };
+		9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8874201EE54DE400536F03 /* YJInfoCell.m */; };
+		9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8874231EE54F1A00536F03 /* YJInfoHeaderCell.m */; };
+		9D8874261EE55E3000536F03 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D8874251EE55E3000536F03 /* iconfont.ttf */; };
 		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,11 @@
 		9D8873FB1EE4352000536F03 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9D8873FC1EE4386300536F03 /* YJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
 		9D8873FD1EE4386300536F03 /* YJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNavigationController.m; sourceTree = "<group>"; };
+		9D88741F1EE54DE400536F03 /* YJInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJInfoCell.h; sourceTree = "<group>"; };
+		9D8874201EE54DE400536F03 /* YJInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJInfoCell.m; sourceTree = "<group>"; };
+		9D8874221EE54F1A00536F03 /* YJInfoHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJInfoHeaderCell.h; sourceTree = "<group>"; };
+		9D8874231EE54F1A00536F03 /* YJInfoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJInfoHeaderCell.m; sourceTree = "<group>"; };
+		9D8874251EE55E3000536F03 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -239,6 +247,10 @@
 		9D8873F71EE434F700536F03 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D88741F1EE54DE400536F03 /* YJInfoCell.h */,
+				9D8874201EE54DE400536F03 /* YJInfoCell.m */,
+				9D8874221EE54F1A00536F03 /* YJInfoHeaderCell.h */,
+				9D8874231EE54F1A00536F03 /* YJInfoHeaderCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +258,7 @@
 		9D8873FF1EE439AF00536F03 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9D8874251EE55E3000536F03 /* iconfont.ttf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8874261EE55E3000536F03 /* iconfont.ttf in Resources */,
 				9D8873D31EE4326D00536F03 /* LaunchScreen.storyboard in Resources */,
 				9D8873D01EE4326D00536F03 /* Assets.xcassets in Resources */,
 				9D8873CE1EE4326D00536F03 /* Main.storyboard in Resources */,
@@ -379,6 +393,8 @@
 				9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */,
 				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
 				9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */,
+				9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */,
+				9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */,
 				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
 				9D8873C51EE4326D00536F03 /* main.m in Sources */,
 				9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */,
