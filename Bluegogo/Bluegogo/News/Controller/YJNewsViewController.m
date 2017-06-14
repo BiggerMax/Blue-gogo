@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	[self loadData];
 	self.view.backgroundColor = [UIColor whiteColor];
-	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCRRENHEIGHT) style:UITableViewStylePlain];
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCRENHEIGHT) style:UITableViewStylePlain];
 	self.tableView.backgroundColor = [UIColor whiteColor];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;
@@ -86,5 +86,13 @@
 	[headerView addSubview:titleLabel];
 	
 	return headerView;
+}
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	YJNewsDetailController *detailVC = [YJNewsDetailController new];
+	NSMutableDictionary *detailDic = [self.infoArray objectAtIndex:indexPath.row];
+	detailVC.url = [detailDic objectForKey:@"url"];
+	detailVC.hidesBottomBarWhenPushed = YES;
+	[self.navigationController pushViewController:detailVC animated:YES];
+	return indexPath;
 }
 @end

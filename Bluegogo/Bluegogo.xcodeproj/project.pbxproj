@@ -21,6 +21,11 @@
 		9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8874201EE54DE400536F03 /* YJInfoCell.m */; };
 		9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8874231EE54F1A00536F03 /* YJInfoHeaderCell.m */; };
 		9D8874261EE55E3000536F03 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D8874251EE55E3000536F03 /* iconfont.ttf */; };
+		9D8C8E721EEFCDE90058F7B4 /* YJNewsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E711EEFCDE90058F7B4 /* YJNewsDetailController.m */; };
+		9D8C8E751EEFDF090058F7B4 /* YJAffairListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E741EEFDF090058F7B4 /* YJAffairListCell.m */; };
+		9D8C8E781EF0ED5D0058F7B4 /* YJUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E771EF0ED5D0058F7B4 /* YJUserViewController.m */; };
+		9D8C8E7B1EF0EDFC0058F7B4 /* YJEditInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E7A1EF0EDFC0058F7B4 /* YJEditInfoController.m */; };
+		9D8C8E7E1EF10F360058F7B4 /* YJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E7D1EF10F360058F7B4 /* YJLoginViewController.m */; };
 		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +57,16 @@
 		9D8874221EE54F1A00536F03 /* YJInfoHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJInfoHeaderCell.h; sourceTree = "<group>"; };
 		9D8874231EE54F1A00536F03 /* YJInfoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJInfoHeaderCell.m; sourceTree = "<group>"; };
 		9D8874251EE55E3000536F03 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		9D8C8E701EEFCDE90058F7B4 /* YJNewsDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNewsDetailController.h; sourceTree = "<group>"; };
+		9D8C8E711EEFCDE90058F7B4 /* YJNewsDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNewsDetailController.m; sourceTree = "<group>"; };
+		9D8C8E731EEFDF090058F7B4 /* YJAffairListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJAffairListCell.h; sourceTree = "<group>"; };
+		9D8C8E741EEFDF090058F7B4 /* YJAffairListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJAffairListCell.m; sourceTree = "<group>"; };
+		9D8C8E761EF0ED5D0058F7B4 /* YJUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJUserViewController.h; sourceTree = "<group>"; };
+		9D8C8E771EF0ED5D0058F7B4 /* YJUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJUserViewController.m; sourceTree = "<group>"; };
+		9D8C8E791EF0EDFC0058F7B4 /* YJEditInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJEditInfoController.h; sourceTree = "<group>"; };
+		9D8C8E7A1EF0EDFC0058F7B4 /* YJEditInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEditInfoController.m; sourceTree = "<group>"; };
+		9D8C8E7C1EF10F360058F7B4 /* YJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJLoginViewController.h; sourceTree = "<group>"; };
+		9D8C8E7D1EF10F360058F7B4 /* YJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJLoginViewController.m; sourceTree = "<group>"; };
 		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +215,12 @@
 			children = (
 				9D8873F11EE434CE00536F03 /* YJMyViewController.h */,
 				9D8873F21EE434CE00536F03 /* YJMyViewController.m */,
+				9D8C8E761EF0ED5D0058F7B4 /* YJUserViewController.h */,
+				9D8C8E771EF0ED5D0058F7B4 /* YJUserViewController.m */,
+				9D8C8E791EF0EDFC0058F7B4 /* YJEditInfoController.h */,
+				9D8C8E7A1EF0EDFC0058F7B4 /* YJEditInfoController.m */,
+				9D8C8E7C1EF10F360058F7B4 /* YJLoginViewController.h */,
+				9D8C8E7D1EF10F360058F7B4 /* YJLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +235,8 @@
 		9D8873EC1EE433E800536F03 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D8C8E731EEFDF090058F7B4 /* YJAffairListCell.h */,
+				9D8C8E741EEFDF090058F7B4 /* YJAffairListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +256,8 @@
 			children = (
 				9D8873F81EE4350300536F03 /* YJNewsViewController.h */,
 				9D8873F91EE4350300536F03 /* YJNewsViewController.m */,
+				9D8C8E701EEFCDE90058F7B4 /* YJNewsDetailController.h */,
+				9D8C8E711EEFCDE90058F7B4 /* YJNewsDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,12 +416,17 @@
 				9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */,
 				9D8873F01EE434C300536F03 /* YJHomeViewController.m in Sources */,
 				9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */,
+				9D8C8E781EF0ED5D0058F7B4 /* YJUserViewController.m in Sources */,
 				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
+				9D8C8E721EEFCDE90058F7B4 /* YJNewsDetailController.m in Sources */,
+				9D8C8E751EEFDF090058F7B4 /* YJAffairListCell.m in Sources */,
 				9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */,
 				9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */,
 				9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */,
 				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
 				9D8873C51EE4326D00536F03 /* main.m in Sources */,
+				9D8C8E7B1EF0EDFC0058F7B4 /* YJEditInfoController.m in Sources */,
+				9D8C8E7E1EF10F360058F7B4 /* YJLoginViewController.m in Sources */,
 				9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
