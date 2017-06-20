@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YJLoginController.h"
 @interface AppDelegate ()
 
 @end
@@ -22,6 +22,13 @@
 	self.window.rootViewController = tabBarVC;
 	[self.window makeKeyAndVisible];
 	
+	NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+	if (!username) {
+		YJLoginController *login = [YJLoginController new];
+		YJNavigationController *navigation = [[YJNavigationController alloc] initWithRootViewController:login];
+		navigation.navigationBar.hidden = YES;
+		[self.window.rootViewController presentViewController:navigation animated:YES completion:nil];
+	}
 	return YES;
 }
 

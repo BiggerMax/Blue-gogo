@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	[self initUI];
 	[self.view addSubview:self.lodingView];
-	UIWebView *myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCRENHEIGHT)];
+	UIWebView *myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
 	myWebView.delegate = self;
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:_url]];
 	[myWebView loadRequest:request];
@@ -28,7 +28,7 @@
 	
 }
 -(void)initUI{
-	UIView *loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCRENHEIGHT)];
+	UIView *loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
 	loadingView.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1];
 	UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(12, 30, 30, 30)];
 	backBtn.titleLabel.font = [UIFont fontWithName:@"iconfont" size:30.0];

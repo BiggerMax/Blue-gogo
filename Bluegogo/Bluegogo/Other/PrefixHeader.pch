@@ -21,7 +21,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <AFNetworking/AFNetworking.h>
 #define  SCREENWIDTH ([UIScreen mainScreen].bounds.size.width)
-#define  SCRENHEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define  SCREENHEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define  NAVBLUECOLOR [UIColor colorWithRed:40/255.0f green:158/255.0f blue:252/255.0f alpha:1]
 #define COLOR(r,g,b) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1]
 #define BGGRAYCOLOR COLOR(234,234,234)

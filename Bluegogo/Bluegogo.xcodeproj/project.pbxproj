@@ -26,6 +26,8 @@
 		9D8C8E781EF0ED5D0058F7B4 /* YJUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E771EF0ED5D0058F7B4 /* YJUserViewController.m */; };
 		9D8C8E7B1EF0EDFC0058F7B4 /* YJEditInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E7A1EF0EDFC0058F7B4 /* YJEditInfoController.m */; };
 		9D8C8E7E1EF10F360058F7B4 /* YJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C8E7D1EF10F360058F7B4 /* YJLoginViewController.m */; };
+		9D9E8A281EF8BDFB000AE71A /* YJLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8A271EF8BDFB000AE71A /* YJLoginController.m */; };
+		9D9E8A2B1EF8E4A0000AE71A /* YJRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8A2A1EF8E4A0000AE71A /* YJRegisterViewController.m */; };
 		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		9D8C8E7A1EF0EDFC0058F7B4 /* YJEditInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJEditInfoController.m; sourceTree = "<group>"; };
 		9D8C8E7C1EF10F360058F7B4 /* YJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJLoginViewController.h; sourceTree = "<group>"; };
 		9D8C8E7D1EF10F360058F7B4 /* YJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJLoginViewController.m; sourceTree = "<group>"; };
+		9D9E8A261EF8BDFB000AE71A /* YJLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJLoginController.h; sourceTree = "<group>"; };
+		9D9E8A271EF8BDFB000AE71A /* YJLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJLoginController.m; sourceTree = "<group>"; };
+		9D9E8A291EF8E4A0000AE71A /* YJRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJRegisterViewController.h; sourceTree = "<group>"; };
+		9D9E8A2A1EF8E4A0000AE71A /* YJRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRegisterViewController.m; sourceTree = "<group>"; };
 		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +127,7 @@
 		9D8873C21EE4326D00536F03 /* Bluegogo */ = {
 			isa = PBXGroup;
 			children = (
+				9D9E8A221EF8BD67000AE71A /* LoginAndRegister */,
 				9D8873FF1EE439AF00536F03 /* Resource */,
 				9D8873F41EE434F700536F03 /* News */,
 				9D8873E21EE433E800536F03 /* Home */,
@@ -288,6 +295,41 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		9D9E8A221EF8BD67000AE71A /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E8A231EF8BDE5000AE71A /* Controller */,
+				9D9E8A241EF8BDE5000AE71A /* Model */,
+				9D9E8A251EF8BDE5000AE71A /* View */,
+			);
+			path = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		9D9E8A231EF8BDE5000AE71A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E8A261EF8BDFB000AE71A /* YJLoginController.h */,
+				9D9E8A271EF8BDFB000AE71A /* YJLoginController.m */,
+				9D9E8A291EF8E4A0000AE71A /* YJRegisterViewController.h */,
+				9D9E8A2A1EF8E4A0000AE71A /* YJRegisterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D9E8A241EF8BDE5000AE71A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D9E8A251EF8BDE5000AE71A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,7 +365,7 @@
 				TargetAttributes = {
 					9D8873BF1EE4326D00536F03 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = DG7CZTQQHX;
+						DevelopmentTeam = JH4GHHSL6Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -416,6 +458,7 @@
 				9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */,
 				9D8873F01EE434C300536F03 /* YJHomeViewController.m in Sources */,
 				9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */,
+				9D9E8A2B1EF8E4A0000AE71A /* YJRegisterViewController.m in Sources */,
 				9D8C8E781EF0ED5D0058F7B4 /* YJUserViewController.m in Sources */,
 				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
 				9D8C8E721EEFCDE90058F7B4 /* YJNewsDetailController.m in Sources */,
@@ -427,6 +470,7 @@
 				9D8873C51EE4326D00536F03 /* main.m in Sources */,
 				9D8C8E7B1EF0EDFC0058F7B4 /* YJEditInfoController.m in Sources */,
 				9D8C8E7E1EF10F360058F7B4 /* YJLoginViewController.m in Sources */,
+				9D9E8A281EF8BDFB000AE71A /* YJLoginController.m in Sources */,
 				9D8873FA1EE4350300536F03 /* YJNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +592,7 @@
 			baseConfigurationReference = 9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				DEVELOPMENT_TEAM = JH4GHHSL6Z;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Bluegogo/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = Bluegogo/Info.plist;
@@ -564,7 +608,7 @@
 			baseConfigurationReference = 97681A0AFB54A9BC788E47D3 /* Pods-Bluegogo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = DG7CZTQQHX;
+				DEVELOPMENT_TEAM = JH4GHHSL6Z;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Bluegogo/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = Bluegogo/Info.plist;

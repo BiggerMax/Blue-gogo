@@ -19,7 +19,7 @@
     [super viewDidLoad];
 	[self loadData];
 	self.view.backgroundColor = [UIColor whiteColor];
-	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCRENHEIGHT) style:UITableViewStylePlain];
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT) style:UITableViewStylePlain];
 	self.tableView.backgroundColor = [UIColor whiteColor];
 	self.tableView.delegate = self;
 	self.tableView.dataSource = self;

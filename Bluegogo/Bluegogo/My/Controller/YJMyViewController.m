@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UITableView *affairList;
 @property (nonatomic, strong) NSArray *affairArr;
 @property (nonatomic, strong) NSArray *settingArr;
+
 @end
 
 @implementation YJMyViewController
@@ -23,6 +24,12 @@
     [super viewDidLoad];
 	[self loadData];
 	[self initUI];
+	__block NSInteger value = 0;
+	void(^block)(void) = ^{
+		value =1 ;
+	};
+	block();
+
 }
 -(void)loadData{
 	NSArray *array = @[@{@"affair": @"个人信息", @"icon": @"\U0000e89e", @"holder": @""}, @{@"affair": @"历史预定", @"icon": @"\U0000e61a", @"holder": @""}, @{@"affair": @"历史足迹", @"icon": @"\U0000e8d0", @"holder": @""}, @{@"affair": @"我的积分", @"icon": @"\U0000e86e", @"holder": @""}];
@@ -33,6 +40,7 @@
 	
 }
 -(void)initUI{
+	
 	self.view.backgroundColor = [UIColor colorWithRed:245/255.0f green:245/255.0f blue:245/255.0f alpha:1.0f];
 	UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake((SCREENWIDTH -80) / 2, 120, 80, 80)];
 	image.layer.cornerRadius = 40;
