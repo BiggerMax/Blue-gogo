@@ -128,7 +128,7 @@
 		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 		hud.mode = MBProgressHUDModeIndeterminate;
 		hud.label.text = @"请稍后";
-		[hud hideAnimated:YES afterDelay:0.2f];
+		[hud hideAnimated:YES afterDelay:1.0f];
 		[[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
 			[[SDImageCache sharedImageCache] clearMemory];
 			[self refreshCache];

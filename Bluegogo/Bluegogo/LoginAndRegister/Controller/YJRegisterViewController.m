@@ -104,7 +104,78 @@
 }
 -(void)PushRegister:(id)sender
 {
-	
+	[username resignFirstResponder];
+	[password resignFirstResponder];
+	NSString *user = username.text;
+	NSString *psw = password.text;
+	NSString *ps_r = confirmpassword.text;
+	if (user.length <= 0 || user.length < 6) {
+		[MBProgressHUD hideHUDForView:self.view animated:YES];
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+		hud.mode = MBProgressHUDModeText;
+		hud.label.text = @"请输入6位以上用户名";
+		[hud hideAnimated:YES afterDelay:1.0f];
+	}else if (psw.length <= 6){
+		[MBProgressHUD hideHUDForView:self.view animated:YES];
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+		hud.mode = MBProgressHUDModeText;
+		hud.label.text = @"请输入6位以上密码";
+		[hud hideAnimated:YES afterDelay:1];
+
+	}else if (![psw isEqualToString:ps_r]){
+		[MBProgressHUD hideHUDForView:self.view animated:YES];
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+		hud.mode = MBProgressHUDModeText;
+		hud.label.text = @"两次输入密码不一致";
+		[hud hideAnimated:YES afterDelay:1];
+	}else
+	{
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+		hud.mode = MBProgressHUDModeIndeterminate;
+		hud.label.text = @"加载中";
+		[hud hideAnimated:YES afterDelay:5];
+
+		NSDictionary *paramers = @{@"if": @"Register", @"username": user, @"password":psw};
+		AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+		[manager POST:SERVER_ADDRESS parameters:paramers progress:^(NSProgress * _Nonnull uploadProgress) {
+			
+		} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+			NSNumber *code = [responseObject objectForKey:@"code"];
+			if (code.intValue == 1)
+			{
+				[MBProgressHUD hideHUDForView:self.view animated:YES];
+				MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+				hud.mode = MBProgressHUDModeText;
+				hud.label.text = @"注册成功，快去登录吧";
+				[hud hideAnimated:YES afterDelay:1.0];
+				[self.navigationController popViewControllerAnimated:YES];
+				confirmpassword.text = nil;
+				username.text = nil;
+				password.text = nil;
+				[username resignFirstResponder];
+				[password resignFirstResponder];
+				[confirmpassword resignFirstResponder];
+			}else{
+				[MBProgressHUD hideHUDForView:self.view animated:YES];
+				MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+				hud.mode = MBProgressHUDModeText;
+				hud.label.text = @"此账户已注册，换个账户吧";
+				[hud hideAnimated:YES afterDelay:1];
+				confirmpassword.text = nil;
+				username.text = nil;
+				password.text = nil;
+				[username resignFirstResponder];
+				[password resignFirstResponder];
+				[confirmpassword resignFirstResponder];
+			}
+		} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+			[MBProgressHUD hideHUDForView:self.view animated:YES];
+			MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+			hud.mode = MBProgressHUDModeText;
+			hud.label.text = @"注册失败，请稍微重试!";
+			[hud hideAnimated:YES afterDelay:1];
+		}];
+	}
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {

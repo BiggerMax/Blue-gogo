@@ -137,6 +137,7 @@
 			[hud hideAnimated:YES afterDelay:1.0];
 		}];
 	}
+	
 }
 -(void)gotoRegisterViewController:(UIButton *)sender
 {
