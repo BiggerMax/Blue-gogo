@@ -29,6 +29,7 @@
 		9D9E8A281EF8BDFB000AE71A /* YJLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8A271EF8BDFB000AE71A /* YJLoginController.m */; };
 		9D9E8A2B1EF8E4A0000AE71A /* YJRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8A2A1EF8E4A0000AE71A /* YJRegisterViewController.m */; };
 		9D9E8AD21EFD7606000AE71A /* YJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8AD11EFD7606000AE71A /* YJCollectionViewCell.m */; };
+		9D9E8B041EFFFE8D000AE71A /* YJHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */; };
 		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		9D9E8A2A1EF8E4A0000AE71A /* YJRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJRegisterViewController.m; sourceTree = "<group>"; };
 		9D9E8AD01EFD7606000AE71A /* YJCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJCollectionViewCell.h; sourceTree = "<group>"; };
 		9D9E8AD11EFD7606000AE71A /* YJCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJCollectionViewCell.m; sourceTree = "<group>"; };
+		9D9E8B021EFFFE8D000AE71A /* YJHomeTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHomeTopView.h; sourceTree = "<group>"; };
+		9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeTopView.m; sourceTree = "<group>"; };
 		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -208,6 +211,8 @@
 			children = (
 				9D9E8AD01EFD7606000AE71A /* YJCollectionViewCell.h */,
 				9D9E8AD11EFD7606000AE71A /* YJCollectionViewCell.m */,
+				9D9E8B021EFFFE8D000AE71A /* YJHomeTopView.h */,
+				9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */,
 				9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */,
 				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
+				9D9E8B041EFFFE8D000AE71A /* YJHomeTopView.m in Sources */,
 				9D8873C51EE4326D00536F03 /* main.m in Sources */,
 				9D8C8E7B1EF0EDFC0058F7B4 /* YJEditInfoController.m in Sources */,
 				9D8C8E7E1EF10F360058F7B4 /* YJLoginViewController.m in Sources */,

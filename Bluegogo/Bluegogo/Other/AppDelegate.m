@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YJLoginController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
 	
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	MainTabBarController *tabBarVC = [MainTabBarController new];
@@ -31,8 +33,15 @@
 	}
 	return YES;
 }
-
-
+-(void)mapConfig
+{
+	[AMapServices sharedServices].apiKey = @"ad982a40bb4de9f2f08e2d53ddb5504a";
+}
+-(void)weatherConfig
+{
+	[[NSUserDefaults standardUserDefaults] setObject:@"6acbcbe1487348e98f807d0aa2b7185c" forKey:@"weather_key"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 	// Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

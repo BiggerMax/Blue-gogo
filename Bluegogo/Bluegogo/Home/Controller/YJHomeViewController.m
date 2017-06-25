@@ -8,8 +8,20 @@
 
 #import "YJHomeViewController.h"
 #import "YJCollectionViewCell.h"
-@interface YJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+#import "YJHomeTopView.h"
+#import <CoreLocation/CoreLocation.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+@interface YJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,HomeTopViewDelegate,CLLocationManagerDelegate,AMapSearchDelegate>
 @property (nonatomic, strong) NSArray *collectionItems;
+@property(nonatomic,copy) NSString *locationStr;
+@property(nonatomic,strong) AMapReGeocode *geoCode;
+@property(nonatomic,strong) CLLocationManager *locManager;
+@property(nonatomic,assign) CLLocationCoordinate2D coorDinate;
+@property(nonatomic,strong)AMapSearchAPI *searchApi;
+@property(nonatomic, strong) NSString *weatherKey;
+@property(nonatomic, strong) NSMutableDictionary *weatherDic;
+@property(nonatomic, assign) NSUInteger ordersCount;
 @end
 
 @implementation YJHomeViewController
@@ -17,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	[self initProperty];
 	[self loadData];
 	[self initUI];
 }
@@ -29,6 +42,9 @@
 -(void)initUI
 {
 	self.view.backgroundColor = [UIColor whiteColor];
+	YJHomeTopView *topView = [[YJHomeTopView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 100)];
+	topView.delegate = self;
+	[self.view addSubview:topView];
 	
 	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 	flowLayout.itemSize = CGSizeMake(SCREENWIDTH / 2 - 0.5, (SCREENHEIGHT - 150) /3 -1
@@ -43,7 +59,24 @@
 	[collectionView registerClass:[YJCollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 	[self.view addSubview:collectionView];
 }
-
+-(void)initProperty
+{
+	self.searchApi = [AMapSearchAPI new]
+	;
+	self.searchApi.delegate = self;
+	self.locManager = [CLLocationManager new];
+	self.locManager.delegate = self;
+	self.locManager.desiredAccuracy = kCLLocationAccuracyBest;
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeAddress) name:@"changeAddress" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postAddPlace) name:@"postAddPlace" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addOrders) name:@"addOrderStates" object:nil];
+	self.weatherKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"weather_key"];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+	self.navigationController.navigationBar.hidden = YES;
+}
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 	return 1;
@@ -62,4 +95,10 @@
 	return cell;
 
 }
+- (void)changeAddress
+{
+	NSLog(@"地址已经改变");
+	self.locationStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"address"];
+}
+
 @end
