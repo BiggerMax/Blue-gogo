@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YJHomeTopView.h"
 @interface YJHomeViewController : UIViewController
-
+@property(nonatomic,strong) YJHomeTopView *topView;
 @end

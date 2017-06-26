@@ -8,13 +8,22 @@
 
 #import "YJHomeViewController.h"
 #import "YJCollectionViewCell.h"
-#import "YJHomeTopView.h"
+#import "YJLocationViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-@interface YJHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,HomeTopViewDelegate,CLLocationManagerDelegate,AMapSearchDelegate>
+@interface YJHomeViewController ()
+<
+UICollectionViewDelegate,
+UICollectionViewDataSource,
+HomeTopViewDelegate,
+CLLocationManagerDelegate,
+AMapSearchDelegate,
+LocationViewDelegate
+>
+
 @property (nonatomic, strong) NSArray *collectionItems;
-@property(nonatomic,copy) NSString *locationStr;
+@property(nonatomic,strong) NSString *locationStr;
 @property(nonatomic,strong) AMapReGeocode *geoCode;
 @property(nonatomic,strong) CLLocationManager *locManager;
 @property(nonatomic,assign) CLLocationCoordinate2D coorDinate;
@@ -32,6 +41,8 @@
 	[self initProperty];
 	[self loadData];
 	[self initUI];
+	[self locate];
+	[self checkOrders];
 }
 -(void)loadData
 {
@@ -45,6 +56,7 @@
 	YJHomeTopView *topView = [[YJHomeTopView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 100)];
 	topView.delegate = self;
 	[self.view addSubview:topView];
+	self.topView = topView;
 	
 	UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 	flowLayout.itemSize = CGSizeMake(SCREENWIDTH / 2 - 0.5, (SCREENHEIGHT - 150) /3 -1
@@ -95,10 +107,210 @@
 	return cell;
 
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	if (indexPath.item == 1) {
+		NSMutableString *mulString = [[NSMutableString alloc] initWithFormat:@"tel:110"];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mulString]];
+	}
+}
+/**************************/
 - (void)changeAddress
 {
 	NSLog(@"地址已经改变");
 	self.locationStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"address"];
 }
+-(void)postAddPlace
+{
+	NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"id"];
+	if (user_id && self.locationStr && ![self.locationStr isEqualToString:@""]) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+			NSString *latitude = [NSString stringWithFormat:@"%f",self.coorDinate.latitude];
+			NSString *longtitude = [NSString stringWithFormat:@"%f",self.coorDinate.longitude];
+			NSDictionary *parameters = @{@"if": @"AddPlace",@"user_id":user_id, @"latitude": latitude, @"longitude": longtitude, @"place_name": self.locationStr, @"place_address": self.geoCode.formattedAddress};
+			AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+			[manager POST:SERVER_ADDRESS parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+				
+			} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+				NSNumber *number = [responseObject objectForKey:@"code"];
+				if (number.integerValue == 1) {
+					NSLog(@"地理位置添加成功");
+				}
+			} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+				NSLog(@"地理位置添加失败");
+			}];
+		});
+	}else
+	{
+		NSLog(@"地理位置添加失败");
+	}
+}
 
+-(void)addOrders
+{
+	NSMutableArray *orders = [[NSUserDefaults standardUserDefaults] objectForKey:@"orderStates"];
+	if (orders.count >= self.ordersCount) {
+		self.ordersCount = orders.count;
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.topView.notisNum.hidden = NO;
+			self.topView.notisNum.text = [NSString stringWithFormat:@"%lu",self.ordersCount];
+		});
+	}
+	else{
+		if (orders.count == 0) {
+			dispatch_async(dispatch_get_main_queue(), ^{
+				self.topView.notisNum.hidden = YES;
+			});
+		}
+	}
+}
+-(void)checkOrders
+{
+	NSMutableArray *orders = [[NSUserDefaults standardUserDefaults] objectForKey:@"orderStates"];
+	self.ordersCount = orders.count;
+	if (self.ordersCount == 0) {
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.topView.notisNum.hidden = YES;
+		});
+	}else
+	{
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.topView.notisNum.hidden = NO;
+			self.topView.notisNum.text = [NSString stringWithFormat:@"%lu", self.ordersCount];
+		});
+	}
+}
+-(void)locate
+{
+		dispatch_async(dispatch_get_global_queue(0, 0), ^{
+			if (TARGET_IPHONE_SIMULATOR) {
+				CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(39.958186, 116.306107);
+				AMapCoordinateType type = AMapCoordinateTypeGPS;
+				_coorDinate = AMapCoordinateConvert(CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude), type);
+				[self reverseGeoCode];
+
+			}
+		else{
+			if([self.locManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+				[self.locManager requestWhenInUseAuthorization];
+			}
+			[self.locManager startUpdatingLocation];
+		});
+}
+
+#pragma mark --Location delegate
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+{
+	CLLocation *location = [locations lastObject];
+	CLLocationCoordinate2D coordination = location.coordinate;
+	NSLog(@"纬度:%f 经度:%f", coordination.latitude, coordination.longitude);
+	[self reverseGeoCode];
+	
+	AMapCoordinateType type = AMapCoordinateTypeGPS;
+	_coorDinate = AMapCoordinateConvert(CLLocationCoordinate2DMake(coordination.latitude, coordination.longitude), type);
+	[manager stopUpdatingLocation];
+}
+-(void)reverseGeoCode
+{
+	AMapReGeocodeSearchRequest *requst = [AMapReGeocodeSearchRequest new];
+	requst.location = [AMapGeoPoint locationWithLatitude:self.coorDinate.latitude longitude:self.coorDinate.longitude];
+	requst.requireExtension = YES;
+	[self.searchApi AMapReGoecodeSearch:requst];
+}
+-(void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response
+{
+	if (response.regeocode != nil) {
+		self.geoCode = response.regeocode;
+		[self updateWeather];
+		
+		NSString *neighbor = self.geoCode.addressComponent.neighborhood;
+		NSString *building = self.geoCode.addressComponent.building;
+		NSString *address = [NSString stringWithFormat:@"%@%@",neighbor,building];
+		self.locationStr= address;
+		if ([address isEqualToString:@""]) {
+			self.locationStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"address"];
+		}else
+		{
+			[[NSUserDefaults standardUserDefaults] setObject:address forKey:@"address"];
+		}
+		[self postAddPlace];
+	}
+}
+- (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error
+{
+	NSLog(@"Error: %@", error);
+}
+
+#pragma mark LocationView Delegate
+
+-(void)reLocate
+{
+	[self locate];
+}
+
+#pragma  mark TopView Delegate
+-(void)reLocateBtnClick
+{
+	YJLocationViewController *locatioView = [[YJLocationViewController alloc] init];
+	locatioView.delegate = self;
+	NSString *city = self.geoCode.addressComponent.city;
+	NSString *district = self.geoCode.addressComponent.district;
+	NSString *neighbor = self.geoCode.addressComponent.neighborhood;
+	NSString *building = self.geoCode.addressComponent.building;
+	NSString *address = [NSString stringWithFormat:@"%@%@%@%@",city,district,neighbor,building];
+	locatioView.locationStr = address;
+	
+	NSMutableArray *poitArray = [NSMutableArray new];
+	for (int i = 0; i < 3; i++) {
+		if ([self.geoCode.pois count] > i) {
+			NSString *pointString = self.geoCode.pois[i].name;
+			[poitArray addObject:pointString];
+		}
+	}
+	locatioView.pois = poitArray;
+	[self presentViewController:locatioView animated:YES completion:nil];
+}
+-(void)updateWeather
+{
+	dispatch_async(dispatch_get_global_queue(0, 0), ^{
+		NSString *url = @"https://free-api.heweather.com/v5/now";
+		NSString *city = self.geoCode.addressComponent.city;
+		NSDictionary *parameters = @{@"city": city, @"key": self.weatherKey};
+		AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+		[manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+			
+		} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+			NSLog(@"这里打印请求成功要做的事");
+			NSLog(@"%@",responseObject);
+			NSMutableArray *HeWeather = [responseObject objectForKey:@"HeWeather5"];
+			NSMutableDictionary *object = [HeWeather objectAtIndex:0];
+			NSMutableDictionary *now = [object objectForKey:@"now"];
+			NSMutableDictionary *con = [now objectForKey:@"cond"];
+			NSString *weatherStr = [con objectForKey:@"txt"];
+			
+			NSString *tmpStr = [now objectForKey:@"tmp"];
+			
+			NSLog(@"weather: %@,,, tmp: %@", weatherStr, tmpStr);
+			dispatch_async(dispatch_get_main_queue(), ^{
+				self.topView.weatherLabel.text = weatherStr;
+				self.topView.temperatureLabel.text = [NSString stringWithFormat:@"%@°", tmpStr];
+			});
+
+		} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+			NSLog(@"%@",error);
+		}];
+	});
+}
+-(void)weatherInfo
+{
+	NSLog(@"!!");
+}
+#pragma mark Setter
+-(void)setLocationStr:(NSString *)locationStr
+{
+	_locationStr = locationStr;
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.topView.locationLabel.text = _locationStr;
+	});
+}
 @end

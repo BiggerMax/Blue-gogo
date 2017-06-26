@@ -31,16 +31,19 @@
 	_locationImage.textColor = [UIColor whiteColor];
 	[locationView addSubview:_locationImage];
 	
-	_locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, SCREENWIDTH / 2, 20)];
-	_locationLabel.textColor = [UIColor whiteColor];
-	_locationLabel.font = [UIFont systemFontOfSize:20];
-	_locationLabel.textAlignment = NSTextAlignmentLeft;
-	[locationView addSubview:_locationLabel];
+	UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, SCREENWIDTH / 2, 20)];
+	locationLabel.textColor = [UIColor whiteColor];
+	locationLabel.font = [UIFont systemFontOfSize:20];
+	locationLabel.textAlignment = NSTextAlignmentLeft;
+	[locationView addSubview:locationLabel];
+	self.locationLabel = locationLabel;
+	[self addSubview:locationView];
 	
 	UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(reLocatingClick:)];
 	[locationView addGestureRecognizer:gesture];
+	
 	self.locationView = locationView;
-	[self addSubview:self.locationView];
+	
 	
 	_temperatureLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREENWIDTH * 0.75, 40, SCREENWIDTH * 0.08, 15)];
 	_temperatureLabel.textColor = [UIColor whiteColor];

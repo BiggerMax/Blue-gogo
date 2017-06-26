@@ -25,6 +25,14 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Bluegogo请求地理位置</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Bluegogo请求地理位置</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>iconfont.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -38,10 +46,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>iconfont.ttf</string>
 	</array>
 </dict>
 </plist>

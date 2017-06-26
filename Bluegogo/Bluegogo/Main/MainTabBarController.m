@@ -30,6 +30,7 @@
 	YJNavigationController *nav = [[YJNavigationController alloc] initWithRootViewController:controller];
 	[nav.tabBarItem setImage:image];
 	controller.title = title;
+	nav.tabBarController.tabBar.tintColor = [UIColor redColor];
 	[nav.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
 	nav.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -3);
 	[self addChildViewController:nav];

@@ -22,4 +22,5 @@
 @property(nonatomic,strong) UILabel *notisNum;
 @property(nonatomic,strong) UIView *locationView;
 @property(nonatomic,weak)id <HomeTopViewDelegate> delegate;
+- (instancetype)initWithFrame:(CGRect)frame;
 @end

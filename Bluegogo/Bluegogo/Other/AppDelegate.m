@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	
+	[self mapConfig];
+	[self weatherConfig];
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	MainTabBarController *tabBarVC = [MainTabBarController new];
 	self.window.rootViewController = tabBarVC;
@@ -39,7 +40,7 @@
 }
 -(void)weatherConfig
 {
-	[[NSUserDefaults standardUserDefaults] setObject:@"6acbcbe1487348e98f807d0aa2b7185c" forKey:@"weather_key"];
+	[[NSUserDefaults standardUserDefaults] setObject:@"912c238d118c4a1096880177a9aec6a0" forKey:@"weather_key"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
