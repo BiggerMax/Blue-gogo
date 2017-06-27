@@ -9,6 +9,7 @@
 #import "YJHomeViewController.h"
 #import "YJCollectionViewCell.h"
 #import "YJLocationViewController.h"
+#import "YJDepartViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
@@ -112,7 +113,36 @@ LocationViewDelegate
 	if (indexPath.item == 1) {
 		NSMutableString *mulString = [[NSMutableString alloc] initWithFormat:@"tel:110"];
 		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:mulString]];
+	}else
+	{
+		YJDepartViewController *departVC = [YJDepartViewController new];
+		departVC.location = self.coorDinate;
+		departVC.canDate = NO;
+		if (indexPath.item == 0){
+			departVC.titleStr = @"加油站";
+			departVC.canDate = YES;
+		}
+		if (indexPath.item == 2){
+			departVC.titleStr = @"停车场";
+			departVC.canDate = YES;
+		}
+		if (indexPath.item == 3){
+			departVC.canDate = YES;
+			departVC.titleStr = @"汽车养护";
+			departVC.canDate = YES;
+		}
+		if (indexPath.item == 4){
+			departVC.titleStr = @"汽车维修";
+			departVC.canDate = YES;
+		}
+		if (indexPath.item == 5){
+			departVC.titleStr = @"汽车销售";
+			departVC.canDate = YES;
+		}
+		[self.navigationController pushViewController:departVC animated:YES];
+
 	}
+	
 }
 /**************************/
 - (void)changeAddress

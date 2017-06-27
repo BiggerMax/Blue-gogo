@@ -27,8 +27,8 @@
 {
 	if (self.childViewControllers.count > 0) {
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-		[button setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
-		[button setImage:[UIImage imageNamed:@"highlightBack.png"] forState:UIControlStateHighlighted];
+		[button setImage:[UIImage imageNamed:@"navBarBack"] forState:UIControlStateNormal];
+		[button setImage:[UIImage imageNamed:@"highlightBack"] forState:UIControlStateHighlighted];
 		button.frame = CGRectMake(0, 0, 30, 30);
 		button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 		[button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];

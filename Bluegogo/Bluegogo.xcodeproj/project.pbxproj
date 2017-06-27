@@ -31,6 +31,10 @@
 		9D9E8AD21EFD7606000AE71A /* YJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8AD11EFD7606000AE71A /* YJCollectionViewCell.m */; };
 		9D9E8B041EFFFE8D000AE71A /* YJHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */; };
 		9D9E8B071F00C901000AE71A /* YJLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B061F00C901000AE71A /* YJLocationViewController.m */; };
+		9D9E8B0A1F01012D000AE71A /* YJDepartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B091F01012D000AE71A /* YJDepartViewController.m */; };
+		9D9E8B0D1F010A2E000AE71A /* YJDepartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B0C1F010A2D000AE71A /* YJDepartCell.m */; };
+		9D9E8B101F016A92000AE71A /* YJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B0F1F016A92000AE71A /* YJNavController.m */; };
+		9D9E8B131F023ADB000AE71A /* YJDateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E8B121F023ADB000AE71A /* YJDateController.m */; };
 		E6292F2A8764FD3130A61D3E /* libPods-Bluegogo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +86,14 @@
 		9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHomeTopView.m; sourceTree = "<group>"; };
 		9D9E8B051F00C901000AE71A /* YJLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJLocationViewController.h; sourceTree = "<group>"; };
 		9D9E8B061F00C901000AE71A /* YJLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJLocationViewController.m; sourceTree = "<group>"; };
+		9D9E8B081F01012D000AE71A /* YJDepartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDepartViewController.h; sourceTree = "<group>"; };
+		9D9E8B091F01012D000AE71A /* YJDepartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDepartViewController.m; sourceTree = "<group>"; };
+		9D9E8B0B1F010A2D000AE71A /* YJDepartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDepartCell.h; sourceTree = "<group>"; };
+		9D9E8B0C1F010A2D000AE71A /* YJDepartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDepartCell.m; sourceTree = "<group>"; };
+		9D9E8B0E1F016A92000AE71A /* YJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavController.h; sourceTree = "<group>"; };
+		9D9E8B0F1F016A92000AE71A /* YJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNavController.m; sourceTree = "<group>"; };
+		9D9E8B111F023ADB000AE71A /* YJDateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDateController.h; sourceTree = "<group>"; };
+		9D9E8B121F023ADB000AE71A /* YJDateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDateController.m; sourceTree = "<group>"; };
 		9E08B179545EE45A252408DC /* Pods-Bluegogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bluegogo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bluegogo/Pods-Bluegogo.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F6389672DEAD8499547AFF /* libPods-Bluegogo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bluegogo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +212,12 @@
 				9D8873EF1EE434C300536F03 /* YJHomeViewController.m */,
 				9D9E8B051F00C901000AE71A /* YJLocationViewController.h */,
 				9D9E8B061F00C901000AE71A /* YJLocationViewController.m */,
+				9D9E8B081F01012D000AE71A /* YJDepartViewController.h */,
+				9D9E8B091F01012D000AE71A /* YJDepartViewController.m */,
+				9D9E8B0E1F016A92000AE71A /* YJNavController.h */,
+				9D9E8B0F1F016A92000AE71A /* YJNavController.m */,
+				9D9E8B111F023ADB000AE71A /* YJDateController.h */,
+				9D9E8B121F023ADB000AE71A /* YJDateController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +236,8 @@
 				9D9E8AD11EFD7606000AE71A /* YJCollectionViewCell.m */,
 				9D9E8B021EFFFE8D000AE71A /* YJHomeTopView.h */,
 				9D9E8B031EFFFE8D000AE71A /* YJHomeTopView.m */,
+				9D9E8B0B1F010A2D000AE71A /* YJDepartCell.h */,
+				9D9E8B0C1F010A2D000AE71A /* YJDepartCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,15 +492,19 @@
 			files = (
 				9D8873F31EE434CE00536F03 /* YJMyViewController.m in Sources */,
 				9D8873F01EE434C300536F03 /* YJHomeViewController.m in Sources */,
+				9D9E8B131F023ADB000AE71A /* YJDateController.m in Sources */,
 				9D8873FE1EE4386300536F03 /* YJNavigationController.m in Sources */,
 				9D9E8AD21EFD7606000AE71A /* YJCollectionViewCell.m in Sources */,
 				9D9E8A2B1EF8E4A0000AE71A /* YJRegisterViewController.m in Sources */,
+				9D9E8B101F016A92000AE71A /* YJNavController.m in Sources */,
 				9D8C8E781EF0ED5D0058F7B4 /* YJUserViewController.m in Sources */,
 				9D8873DD1EE432C700536F03 /* AppDelegate.m in Sources */,
 				9D8C8E721EEFCDE90058F7B4 /* YJNewsDetailController.m in Sources */,
 				9D9E8B071F00C901000AE71A /* YJLocationViewController.m in Sources */,
+				9D9E8B0A1F01012D000AE71A /* YJDepartViewController.m in Sources */,
 				9D8C8E751EEFDF090058F7B4 /* YJAffairListCell.m in Sources */,
 				9D8873CB1EE4326D00536F03 /* ViewController.m in Sources */,
+				9D9E8B0D1F010A2E000AE71A /* YJDepartCell.m in Sources */,
 				9D8874241EE54F1A00536F03 /* YJInfoHeaderCell.m in Sources */,
 				9D8874211EE54DE400536F03 /* YJInfoCell.m in Sources */,
 				9D8873E11EE4330A00536F03 /* MainTabBarController.m in Sources */,
